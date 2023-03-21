@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISA CeGov</title>
+    <link rel="stylesheet" href="danh-sach.css">
+
+    <!-- link icon -->
+    <script src="https://kit.fontawesome.com/ed30e0d57a.js"></script>
+</head>
+</head>
+<body>
+
+    <!-- pop up lọc-->
+    <div id="popup-filter" hidden>
+        <div class="popup">
+            <img src="icon/x.svg" id="popup-filter__close"/>
+            <p class="popup__title">Lọc danh hiệu</p>
+            <div class="popup-filter__input">
+                <p>Đối tượng khen thưởng</p>
+                <select class="popup__select">
+                    <option>Tất cả</option>
+                    <option>Gia đình</option>
+                    <option>Tập thể</option>
+                    <option>Cá nhân</option>
+                    <option>Cá nhân và tập thể</option>
+                </select>
+            </div>
+            <div class="popup-filter__input">
+                <p>Cấp khen thưởng</p>
+                <select class="popup__select">
+                    <option>Tất cả</option>
+                </select>
+            </div>
+            <div class="popup-filter__input">
+                <p>Loại phong trào</p>
+                <select class="popup__select">
+                    <option>Tất cả</option>
+                </select>
+            </div>
+            <div class="popup-filter__input">
+                <p>Trạng thái</p>
+                <select class="popup__select">
+                    <option>Tất cả</option>
+                </select>
+            </div>
+            
+        </div>
+        <!-- thanh button -->
+        <div style="padding-right: 24px;display: flex;justify-content: right;background-color: #FAFAFA;height: 60px;width:auto;align-items: center;border-radius: 0px 0px 4px 4px;">
+            <button id="popup__cancle">Hủy</button>
+            <button id="popup__apply">Áp dụng</button>
+        </div>
+    </div>
+
+    <!-- khối bar -->
+    <div id="bar">
+        <div class="bar__right">
+            <img src="icon/bell.jpg"/>
+            <img src="icon/question.jpg"/>
+            <img src="icon/book.jpg"/>
+            <img src="icon/setting.png"/>
+            <img src="icon/avatar-default.png"/>
+        </div>
+        <div class="bar__left">
+            <img src="icon/icons8-squared-menu-48.png"></img>
+            <img src="icon/logo.jpg"/>
+            <p>MISA CeGov</p>
+        </div>
+    </div>
+
+
+    <!-- thanh menu -->
+    <div>
+    <div class="menu">
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <!-- <img style="margin-right:12px;" src="icon/dashboard.png"/> -->
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_dashboard_default.110fa5f3.svg"/>
+                <p>Tổng quan</p>
+            </div>
+        </div>
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <!-- <img style="margin-right:12px;" src="icon/icons8-task-completed-24.png"/> -->
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_movement_default.102c9e3d.svg"/>
+                <p>Thi đua</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_reward_default.156d6945.svg"/>
+                <p>Khen thưởng</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_decision_menu_default.cae653f2.svg"/>
+                <p>Quyết định</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_profile_default.d730fb8f.svg"/>
+                <p>Hồ sơ</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_search_default.903d371b.svg"/>
+                <p>Tra cứu</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_report_default.67157268.svg"/>
+                <p>Báo cáo</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div style="height: 2px;background-color: #ddd;margin-top: 5px;margin-bottom: 5px;margin-left: 12px;margin-right: 12px;"></div>
+        <div class="menu__item" style="margin-top: 0px;">
+            <div class="menu-item__left">
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_category_default.d46f95b8.svg"/>
+                <p>Danh mục</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div class="menu__item">
+            <div class="menu-item__left">
+                <img src="https://cegovapp.misacdn.net/cegov/img/ic_setting_default.be222d4a.svg"/>
+                <p>Thiết lập</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>
+        <div style="height: 2px;background-color: #ddd;margin-top: 5px;margin-bottom: 5px;margin-left: 12px;margin-right: 12px;"></div>
+        <div class="menu__item" style="margin-top: 0px;">
+            <div class="menu-item__left">
+                <img src="	https://cegovapp.misacdn.net/cegov/img/ic_guide_default.186420dc.svg"/>
+                <p>Hướng dẫn</p>
+            </div>
+            <img src="icon/btn-next-page.svg"/>
+        </div>  
+    </div>
+    <!-- nut thu gon -->
+    <div id="btn-collapse" >
+        <img src="https://cegovapp.misacdn.net/cegov/img/ic_toggle.4abb3c52.svg"/>
+        <p>Thu gọn</p>
+    </div>
+    </div>
+
+    <!-- khoi chính danh sách các danh hiệu thi đua -->
+    <div class="div-main">
+        <p class="main__title">Danh hiệu thi đua</p>
+        <div class="main__search">
+            <div style="position: relative;width: 100%">
+                <img src="icon/search.png" class="icon__search"/>
+                <input class="input__search" type="text" name="ten" maxlength="50" placeholder="Nhập mã hoặc tên danh hiệu..." minlength="3"></input>  
+                <button id="button-filter">
+                    <i class="fa-solid fa-filter" style="position: absolute;top:11px;left:8px"></i>
+                    Bộ lọc</button> 
+                <div style="position: absolute;top:0px;right: 0px"> 
+                <button id="button-add">
+                    <i class="fa-regular fa-plus icon" style="position: absolute;top:11px;left:8px"></i>
+                    Thêm danh hiệu</button> 
+                </div>       
+            </div>
+        </div>
+
+        <!-- bảng danh sách -->
+        <div>
+            <div class="div-table">
+            <table style="width: max-content; background-color: #ffffff;">
+                <thead>
+                <tr>
+                    <td modal-name="num"><input type="checkbox" ></input></td>
+                    <td style="max-width:100%;min-width: 150px;" modal-name="name">Tên danh hiệu thi đua</td>
+                    <td style="max-width:100%;min-width: 150px;" modal-name="code">Mã danh hiệu</td>
+                    <td style="max-width:100%;min-width: 150px;" modal-name="object">Đối tượng khen thưởng</td>
+                    <td style="max-width:100%;min-width: 150px;" modal-name="level">Cấp khen thưởng</td>
+                    <td style="max-width:100%;min-width: 150px;" modal-name="type">Loại phong trào</td>
+                    <td style="max-width:100%;min-width: 150px;" modal-name="state">Trạng thái</td>
+                </tr>
+                </thead>
+                
+                <tbody>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <!-- Thanh chuyển trang ở dưới -->
+        <div class="nav-table">
+            <div class="nav-table-bottom">
+                <p>Số bản ghi/trang</p>
+                <select id="nav-table__select">
+                    <option>50</option>
+                </select>
+                <p><b>1</b> - <b id="num-record1">12</b> bản ghi</p>
+                <img src="icon/btn-prev-page.svg"/>
+                <img src="icon/btn-next-page.svg" style="margin-right: 16px;"/>
+            </div>
+            <p style="position: absolute;top:0px;left: 0px;margin-left: 16px;">Tổng số <b id="num-record">0</b> bản ghi</p>
+        </div>
+
+    </div>
+    
+
+    <!-- pop up thêm danh hiệu thi đua-->
+    <div id="popup-add">
+        <div class="popup-add__div">
+            <img src="icon/x.svg" id="popup-add__close"/>
+            <img src="icon/question.jpg" id="popup-add__question"/>
+            <p class="popup__title" style="margin-top: 8px;">Thêm danh hiệu thi đua</p>
+            <div id="div-add__input1">
+                <p>Tên danh hiệu thi đua <span style="color: red;"> *</span></p>
+                <input id="input-name" class="add__input" placeholder="Nhập tên danh hiệu thi đua"/>
+                <div class="err-null" hidden>
+                    Tên danh hiệu không được để trống
+                </div>
+            </div>    
+        </div>
+        <div style="display: flex;">
+            <div class="add__div1">
+                <div id="div-add__input2">
+                    <p>Mã danh hiệu <span style="color: red;"> *</span></p>
+                    <input id="input-code" class="add__input" placeholder=""value="TTLDXS01"/>
+                    <div class="err-null" hidden>
+                        Mã danh hiệu không được để trống
+                    </div>
+                </div>
+                <div id="div-add__input3">
+                    <p>Cấp khen thưởng <span style="color: red;"> *</span></p>
+                    <select class="popup__select">
+                        <option>Cấp nhà nước</option>
+                    </select>
+                    <div class="err-null" hidden>
+                    Cấp khen thưởng không được để trống
+                    </div>
+                </div>
+                
+            </div>
+            <div class="add__div2">
+                <div id="div-add__checkbox1">
+                    <p>Đối tượng khen thưởng <span style="color: red;"> *</span></p>
+                    <div style="display: flex;">
+                        <div style="width:50%;height: 33px;display: flex;align-items: center;margin-top: 8px;">
+                            <input type="checkbox" id="add__checkbox1" style="float:left;width:20px;height: 20px;margin:0"/><p style="text-align: center;margin: 12px">Cá nhân</p>
+                        </div>
+                        <div style="width:50%;height: 33px;display: flex;align-items: center;margin-top: 8px;">
+                            <input type="checkbox" id="add__checkbox2" style="float:left;width:20px;height: 20px;margin:0"/><p style="text-align: center;margin: 12px">Tập thể</p>
+                        </div>
+                    </div>
+                    <div class="err-null" hidden>
+                        Đối tượng khen thưởng không được để trống
+                    </div>
+                </div>
+                <div id="div-add__checkbox2">
+                    <p>Loại phong trào áp dụng <span style="color: red;"> *</span></p>
+                    <div style="display: flex;">
+                        <div style="width:50%;height: 33px;display: flex;align-items: center;margin-top: 8px;">
+                            <input type="checkbox" id="add__checkbox3" style="float:left;width:20px;height: 20px;margin:0"/><p style="text-align: center;margin: 12px">Thường xuyên</p>
+                        </div>
+                        <div style="width:50%;height: 33px;display: flex;align-items: center;margin-top: 8px;">
+                            <input type="checkbox" id="add__checkbox4" style="float:left;width:20px;height: 20px;margin:0"/><p style="text-align: center;margin: 12px">Theo đợt</p>
+                        </div>   
+                    </div>
+                    <div class="err-null" hidden>
+                        Loại phong trào không được để trống
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div id="popup-add__note">
+                <p style="margin: 0;">Ghi chú</p>
+                <textarea id="text-note" type="text" row="5" placeholder="Nhập ghi chú"></textarea>
+        </div>
+        <!-- thanh button -->
+        <div id="popup-add-button">
+            <button id="popup-add-cancel">Hủy</button>
+            <button id="popup-add-saveadd">Lưu & thêm mới</button>
+            <button id="popup-add-save">Lưu</button>
+        </div>
+    </div>
+
+    <!-- thanh button khi chọn các mục trong bảng-->
+    <div id="table-menu">
+        <p style="margin-right: 8px;">Đã chọn <b>01</b></p>
+        <button id="cancel-chose" style="background-color: #F5F5F5;border: 0px solid #3395FF;color: #3395FF;margin-right: 8px;">Bỏ chọn</button>
+        <!-- <div style="width: 80px;height: 36px;color: #3395FF;margin-right: 8px;padding-top: 10px;padding-left: 15px;box-sizing: border-box;"><a >Bỏ chọn</a></div> -->
+        <button style="background-color: #ffffff;border: 1px solid #3395FF;color: #3395FF;margin-right: 8px;">Sử dụng</button>
+        <button style="background-color: #ffffff;border: 1px solid #bbbbbbbb;color: #000000;margin-right: 8px;">Ngừng sử dụng</button>
+        <button style="background-color: #ffffff;border: 1px solid #E60000;color: #E60000;">Xóa</button>
+    </div>
+
+    <!-- thông báo khi validate form thêm -->
+    <div id="notify-validate">
+        <div class="div-notify">
+            <h4 style="font-size: 20px; margin:0px;padding:0px;">Dữ liệu không đúng</h4>
+            <div id="div-list-err" style="margin-left: 34px;font-size: 12px;padding-top:8px;">
+                <li>Tên không được trống</li>
+                <li>Mã không được trống</li>
+                <li>Tên không được trống</li>
+                <li>Mã không được trống</li>    
+            </div>
+            <div class="div-notify__exit"><i style="float:right" class="fa-solid fa-x icon_toast" ></i></div>
+            <div style="width: 24px;height: 24px;border-radius: 100px;background-color: #bfbfbf;position: absolute;left:2px;top:55px"><i class="fa-solid fa-triangle-exclamation" style="color:#FFE7AF;margin-top: 4px;margin-left: 5px;"></i></div>
+        </div>    
+        <button id="div-notify__ok">Đồng ý</button>
+    </div>
+
+    
+    <!-- lớp phủ khi mở popup -->
+    <div class="overlay"></div>
+
+    <!-- gán link js -->
+    <script language="javascript" src="js/danh-sach.js"></script>
+</body>
+</html>
